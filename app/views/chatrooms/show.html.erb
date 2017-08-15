@@ -3,7 +3,7 @@
   <%= @chatroom.name %>
 </p>
 
-<div data-behaviour='messages'>
+<div data-behaviour='messages' data-chatroom-id="<%=@chatroom.id %>" >
   <% @messages.each do |message|%>
      <%= render 'messages/message', message: message%>
 <% end %>
